@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoTify - Sujal Giri</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            background-image: url('https://source.unsplash.com/1600x900/?technology,app');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .features-icon {
+            font-size: 50px;
+            color: #007bff;
+        }
+
+        .testimonial {
+            background-color: #f1f3f5;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>NoTify</h1>
+            <p>Creator of Subscription Expiry Notification App</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Description Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Welcome</h2>
+                    <p class="lead">Welcome to NoTify, the official website for the Subscription Expiry Notification App. This app helps users stay on top of their Netflix, Amazon Prime, and bank service subscriptions by notifying them about upcoming expiries. Stay organized and never miss an important renewal date again!</p>
+                    <button class="cta-button">Download Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">What I Offer</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="features-icon">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <h5 class="card-title">Subscription Expiry Notifications</h5>
+                            <p class="card-text">Get notified for Netflix, Amazon Prime, and bank service subscriptions before they expire.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="features-icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h5 class="card-title">Easy-to-use Interface</h5>
+                            <p class="card-text">An intuitive and modern app interface to help you manage your subscriptions effortlessly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="features-icon">
+                                <i class="bi bi-phone-vibrate"></i>
+                            </div>
+                            <h5 class="card-title">Mobile Experience</h5>
+                            <p class="card-text">Stay informed about your subscriptions on the go with our mobile-first design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Users Say</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="User Image">
+                        <h5>John Doe</h5>
+                        <p>"NoTify is a lifesaver! I never forget to renew my subscriptions anymore. It’s simple, fast, and easy to use!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="User Image">
+                        <h5>Jane Smith</h5>
+                        <p>"As a busy professional, I love how NoTify keeps me on track with all my subscriptions. It’s a must-have!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p class="text-center"><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61563769991865" target="_blank">Sujal Giri</a></p>
+                    <p class="text-center"><strong>Email:</strong> <a href="mailto:sujalgiri574@gmail.com">sujalgiri574@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Sujal Giri. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
