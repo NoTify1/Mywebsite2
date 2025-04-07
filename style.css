@@ -1,95 +1,76 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #1a1a1a;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+.nav-left {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffff;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.nav-center a,
+.nav-right a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.nav-center a:hover,
+.nav-right a:hover {
+  color: #00ffff;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
 }
 
-.auth-form {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffff;
 }
 
-.auth-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #444;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #333;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
 
-.auth-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff4757;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00ffff;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.auth-form .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-}
-
-.subscription-selection {
-    padding: 20px;
-    text-align: center;
-}
-
-.subscription-selection label {
-    display: block;
-    margin: 10px;
-    font-size: 18px;
-}
-
-.subscription-selection button {
-    padding: 10px 20px;
-    background-color: #ff4757;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
 }
