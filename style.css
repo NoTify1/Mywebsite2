@@ -93,6 +93,17 @@ button {
   font-weight: bold;
 }
 
+/* Forgot password text color */
+.forgot-password {
+  color: white; /* Change color to white */
+  margin-top: 10px; /* Add space between forgot password and remember me */
+}
+
+/* Space between Remember Me and Forgot Password */
+.remember-me {
+  margin-bottom: 15px; /* Adds space below Remember Me */
+}
+
 /* Adjust for Mobile view */
 @media (max-width: 768px) {
   nav {
