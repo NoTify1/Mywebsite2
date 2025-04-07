@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoTify - Login / Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleForm(formType) {
+      if (formType === 'signup') {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signupForm').style.display = 'block';
+      } else {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('signupForm').style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
 
+<nav>
+  <div class="nav-left">NoTify</div>
+  <div class="nav-center">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contacts</a>
+    <a href="#">About Us</a>
+  </div>
+  <div class="nav-right">
+    <a href="#" onclick="toggleForm('login')">Sign In</a>
+    <a href="#" onclick="toggleForm('signup')">Sign Up</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- Login Form -->
+  <div id="loginForm">
+    <p>Don't have an account? <a href="#" onclick="toggleForm('signup')" style="color:#00ffff;">Sign up</a></p>
+    <h2>Login</h2>
+    <input type="text" placeholder="Username or Email">
+    <input type="password" placeholder="Password">
+    <button>Sign In</button>
+    <div class="row">
+      <span><input type="checkbox"> Remember me</span>
+      <a href="#" style="color:#00ffff;">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div id="signupForm" style="display: none;">
+    <p>Have an account? <a href="#" onclick="toggleForm('login')" style="color:#00ffff;">Login</a></p>
+    <h2>Register</h2>
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Register</button>
+    <div class="row">
+      <span><input type="checkbox"> Remember me</span>
+      <a href="#" style="color:#00ffff;">Terms & Condition</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
