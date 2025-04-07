@@ -10,23 +10,38 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 10px 20px;
+  padding: 10px 40px; /* Increased gap between NoTify and the nav links */
 }
 
 .nav-left {
   font-size: 24px;
   font-weight: bold;
   color: #00ffff;
+  margin-right: 50px; /* Increase space between NoTify and the menu */
 }
 
-.nav-center a,
-.nav-right a {
-  margin: 0 20px; /* Increased space between links */
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  width: 50%; /* Ensure the navigation links are spaced out horizontally */
+}
+
+.nav-center a {
+  margin: 0 30px; /* Increased space between navigation links */
   color: #fff;
   text-decoration: none;
 }
 
-.nav-center a:hover,
+.nav-center a:hover {
+  color: #00ffff;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px; /* Ensure space between Sign In and Sign Up */
+}
+
 .nav-right a:hover {
   color: #00ffff;
 }
