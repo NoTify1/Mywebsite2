@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoTify</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+    .navbar {
+      background: #1c1c1c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4da6ff;
+    }
+    .nav-links, .auth-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a, .auth-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .form-section, .dashboard {
+      max-width: 500px;
+      background: #1e1e1e;
+      padding: 2rem;
+      margin: 4rem auto;
+      border-radius: 10px;
+    }
+    .form-section h2, .dashboard h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .form-section p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #4da6ff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    .form-footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+    .dashboard {
+      display: none;
+    }
+    .card {
+      background: #2a2a2a;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      color: #4da6ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">NoTify</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+      <a href="#">About Us</a>
+    </div>
+    <div class="auth-links">
+      <a onclick="showLogin()">Sign In</a>
+      <a onclick="showSignup()">Sign Up</a>
+    </div>
+  </div>  <!-- Login Form -->  <div id="login-form" class="form-section">
+    <h2>Login</h2>
+    <p>Don't have an account? <a onclick="showSignup()">Sign up</a></p>
+    <input type="text" id="login-username" placeholder="Username or Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="loginUser()">Sign In</button>
+    <div class="form-footer">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>  <!-- Signup Form -->  <div id="signup-form" class="form-section" style="display:none;">
+    <h2>Register</h2>
+    <p>Have an account? <a onclick="showLogin()">Login</a></p>
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="signupUser()">Register</button>
+    <div class="form-footer">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>  <!-- Dashboard -->  <div id="dashboard" class="dashboard">
+    <h2>Welcome to NoTify Dashboard</h2>
+    <div class="card">
+      <h3>Netflix Subscription</h3>
+      <p>Expires on: 2025-04-30</p>
+    </div>
+    <div class="card">
+      <h3>Amazon Prime</h3>
+      <p>Expires on: 2025-05-10</p>
+    </div>
+    <div class="card">
+      <h3>Bank Service</h3>
+      <p>Expires on: 2025-06-15</p>
+    </div>
+  </div>  <script>
+    function showLogin() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'none';
+    }
+
+    function showSignup() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'block';
+      document.getElementById('dashboard').style.display = 'none';
+    }
+
+    function loginUser() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+    }
+
+    function signupUser() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+    }
+  </script></body>
+</html>
