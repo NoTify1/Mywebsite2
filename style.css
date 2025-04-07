@@ -1,3 +1,4 @@
+/* General styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,63 +6,118 @@ body {
   color: #fff;
 }
 
-.container {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: #1c1c1c;
-  border-radius: 12px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 15px 30px; /* Added padding for spacing */
 }
 
-h2 {
-  text-align: center;
+.nav-left {
+  font-size: 28px;
+  font-weight: bold;
   color: #00ffff;
 }
 
+.nav-center {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-center a {
+  margin: 0 25px; /* Increased gap between navigation links */
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px; /* Adjusted font size for clarity */
+}
+
+.nav-center a:hover {
+  color: #00ffff;
+  text-decoration: underline; /* Hover effect */
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right a {
+  margin-left: 30px; /* Space between Sign In and Sign Up */
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-right a:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+/* Container for login/signup */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 15px;
-  margin: 12px 0;
+  margin: 15px 0;
   background-color: #333;
-  color: #fff;
   border: none;
-  border-radius: 6px;
-}
-
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.remember-me {
-  font-size: 14px;
-}
-
-.forgot-password {
-  font-size: 14px;
   color: white;
-  text-decoration: none;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
+  border-radius: 5px;
 }
 
 button {
   width: 100%;
   padding: 15px;
-  margin-top: 15px;
   background-color: #00ffff;
   color: #111;
-  font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-button:hover {
-  background-color: #00dddd;
+/* Adjust for Mobile view */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Horizontal layout for mobile as well */
+    padding: 15px 15px;
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    font-size: 26px;
+    margin-right: 20px;
+  }
+
+  .nav-center {
+    width: 100%;
+    justify-content: center; /* Centering the links */
+  }
+
+  .nav-center a {
+    margin: 0 20px; /* Adjust gap for mobile */
+    font-size: 14px;
+  }
+
+  .nav-right {
+    justify-content: center; /* Center the Sign In/Sign Up links */
+    margin-left: 10px;
+  }
 }
