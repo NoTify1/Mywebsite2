@@ -7,52 +7,63 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Login Page -->
-  <div id="loginPage">
-    <h1>NoTify</h1>
-    <form id="loginForm">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+  <div class="navbar">
+    <div class="logo">NoTify</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+      <a href="#">About Us</a>
+    </div>
+    <div class="auth-links">
+      <a onclick="showLogin()">Sign In</a>
+      <a onclick="showSignup()">Sign Up</a>
+    </div>
   </div>
 
-  <!-- Sign Up Page -->
-  <div id="signUpPage" style="display:none;">
-    <h1>NoTify</h1>
-    <form id="signUpForm">
-      <label for="newUsername">Username:</label>
-      <input type="text" id="newUsername" name="newUsername" required><br><br>
-      <label for="newPassword">Password:</label>
-      <input type="password" id="newPassword" name="newPassword" required><br><br>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  <!-- Login Form -->
+  <div id="login-form" class="form-section">
+    <h2>Login</h2>
+    <p>Don't have an account? <a onclick="showSignup()">Sign up</a></p>
+    <input type="text" id="login-username" placeholder="Username or Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="loginUser()">Sign In</button>
+    <div class="form-footer">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
   </div>
 
-  <!-- Dashboard Page -->
-  <div id="dashboardPage" style="display:none;">
-    <h1>Welcome to NoTify!</h1>
-    <p>Select the service you want notifications for:</p>
-    <form id="serviceForm">
-      <label for="service">Choose a service:</label>
-      <select id="service" name="service">
-        <option value="netflix">Netflix</option>
-        <option value="amazon">Amazon Prime</option>
-        <option value="bank">Bank</option>
-      </select><br><br>
+  <!-- Signup Form -->
+  <div id="signup-form" class="form-section" style="display:none;">
+    <h2>Register</h2>
+    <p>Have an account? <a onclick="showLogin()">Login</a></p>
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="signupUser()">Register</button>
+    <div class="form-footer">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>
 
-      <label for="notificationMethod">Choose Notification Method:</label>
-      <select id="notificationMethod" name="notificationMethod">
-        <option value="email">Email</option>
-        <option value="sms">SMS</option>
-      </select><br><br>
-
-      <button type="submit">Set Notification</button>
-    </form>
+  <!-- Dashboard -->
+  <div id="dashboard" class="dashboard">
+    <h2>Welcome to NoTify Dashboard</h2>
+    <div class="card">
+      <h3>Netflix Subscription</h3>
+      <p>Expires on: 2025-04-30</p>
+    </div>
+    <div class="card">
+      <h3>Amazon Prime</h3>
+      <p>Expires on: 2025-05-10</p>
+    </div>
+    <div class="card">
+      <h3>Bank Service</h3>
+      <p>Expires on: 2025-06-15</p>
+    </div>
   </div>
 
   <script src="scripts.js"></script>
