@@ -10,24 +10,24 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 10px 40px; /* Increased gap between NoTify and the nav links */
+  padding: 15px 50px; /* Increased padding for more space */
 }
 
 .nav-left {
-  font-size: 24px;
+  font-size: 28px; /* Increased font size for visibility */
   font-weight: bold;
   color: #00ffff;
-  margin-right: 50px; /* Increased space between NoTify and the menu */
+  margin-right: 60px; /* More space between NoTify and the navigation links */
 }
 
 .nav-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
 }
 
 .nav-center a {
-  margin: 0 20px; /* Increased space between navigation links */
+  margin: 0 30px; /* Increased space between navigation links */
   color: #fff;
   text-decoration: none;
 }
@@ -42,7 +42,7 @@ nav {
 }
 
 .nav-right a {
-  margin-left: 20px; /* Space between Sign In and Sign Up */
+  margin-left: 30px; /* Space between Sign In and Sign Up */
   color: #fff;
   text-decoration: none;
 }
@@ -52,7 +52,7 @@ nav {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 600px; /* Increased container size */
   margin: 40px auto;
   padding: 20px;
   background-color: #1c1c1c;
@@ -69,8 +69,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 15px;
+  margin: 15px 0;
   background-color: #333;
   border: none;
   color: white;
@@ -79,7 +79,7 @@ input[type="password"] {
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   background-color: #00ffff;
   color: #111;
   border: none;
@@ -115,7 +115,7 @@ button {
   }
 
   .nav-center a {
-    margin: 10px 0; /* Adjust vertical space for mobile */
+    margin: 15px 0; /* Adjust vertical space for mobile */
   }
 
   .nav-right {
