@@ -21,7 +21,7 @@ nav {
 
 .nav-center a,
 .nav-right a {
-  margin: 0 10px;
+  margin: 0 20px; /* Increased space between links */
   color: #fff;
   text-decoration: none;
 }
