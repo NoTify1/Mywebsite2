@@ -11,7 +11,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 15px 30px; /* Added padding for spacing */
+  padding: 15px 30px; /* Adjusted padding */
 }
 
 .nav-left {
@@ -27,15 +27,15 @@ nav {
 }
 
 .nav-center a {
-  margin: 0 25px; /* Increased gap between navigation links */
+  margin: 0 25px; /* Adjusted gap */
   color: #fff;
   text-decoration: none;
-  font-size: 16px; /* Adjusted font size for clarity */
+  font-size: 16px; 
 }
 
 .nav-center a:hover {
   color: #00ffff;
-  text-decoration: underline; /* Hover effect */
+  text-decoration: underline;
 }
 
 .nav-right {
@@ -57,16 +57,16 @@ nav {
 
 /* Container for login/signup */
 .container {
-  max-width: 600px;
+  max-width: 800px; /* Increased size for more space */
   margin: 40px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #1c1c1c;
   border-radius: 10px;
 }
 
 .container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Increased space for better readability */
   color: #00ffff;
 }
 
@@ -93,10 +93,27 @@ button {
   font-weight: bold;
 }
 
+.forgot-password {
+  color: #fff; /* Changed color to white */
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 /* Adjust for Mobile view */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* Horizontal layout for mobile as well */
+    flex-direction: row; /* Horizontal layout for mobile */
     padding: 15px 15px;
     justify-content: space-between;
   }
@@ -108,7 +125,7 @@ button {
 
   .nav-center {
     width: 100%;
-    justify-content: center; /* Centering the links */
+    justify-content: center; /* Center the links */
   }
 
   .nav-center a {
@@ -117,7 +134,14 @@ button {
   }
 
   .nav-right {
-    justify-content: center; /* Center the Sign In/Sign Up links */
+    justify-content: center; /* Center Sign In/Sign Up links */
     margin-left: 10px;
+  }
+
+  /* Adjust Login container for mobile */
+  .container {
+    max-width: 90%; /* Make container responsive */
+    margin: 20px auto;
+    padding: 20px;
   }
 }
