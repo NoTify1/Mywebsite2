@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - NoTify</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Sign Up - NoTify</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <div class="logo">NoTify</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="login.html">Sign In</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="auth-form">
-        <h2>Sign Up</h2>
-        <form action="dashboard.html" method="POST">
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+<nav>
+  <div class="nav-left">NoTify</div>
+  <div class="nav-center">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contacts</a>
+    <a href="#">About Us</a>
+  </div>
+  <div class="nav-right">
+    <a href="login.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</nav>
 
-            <div class="remember-forgot">
-                <label>
-                    <input type="checkbox"> Remember Me
-                </label>
-                <a href="#">Terms & Conditions</a>
-            </div>
+<div class="container">
+  <p>Have an account? <a href="login.html" style="color:#00ffff;">Login</a></p>
+  <h2>Register</h2>
+  <input type="text" placeholder="First Name">
+  <input type="text" placeholder="Last Name">
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+  <button>Register</button>
+  <div class="row">
+    <span><input type="checkbox"> Remember me</span>
+    <a href="#" style="color:#00ffff;">Terms & Condition</a>
+  </div>
+</div>
 
-            <button type="submit">Register</button>
-        </form>
-        <p>Have an account? <a href="login.html">Login</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NoTify. All rights reserved.</p>
-    </footer>
 </body>
 </html>
