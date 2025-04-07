@@ -17,17 +17,17 @@ nav {
   font-size: 24px;
   font-weight: bold;
   color: #00ffff;
-  margin-right: 50px; /* Increase space between NoTify and the menu */
+  margin-right: 50px; /* Increased space between NoTify and the menu */
 }
 
 .nav-center {
   display: flex;
   justify-content: space-between;
-  width: 50%; /* Ensure the navigation links are spaced out horizontally */
+  width: 100%;
 }
 
 .nav-center a {
-  margin: 0 30px; /* Increased space between navigation links */
+  margin: 0 20px; /* Increased space between navigation links */
   color: #fff;
   text-decoration: none;
 }
@@ -36,10 +36,15 @@ nav {
   color: #00ffff;
 }
 
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .nav-right a {
+  margin-left: 20px; /* Space between Sign In and Sign Up */
   color: #fff;
   text-decoration: none;
-  margin-left: 30px; /* Ensure space between Sign In and Sign Up */
 }
 
 .nav-right a:hover {
@@ -88,4 +93,37 @@ button {
   justify-content: space-between;
   margin-top: 10px;
   font-size: 14px;
+}
+
+/* Mobile Responsiveness: Adjust Navigation */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 20px 20px; /* Increase padding for mobile view */
+  }
+
+  .nav-left {
+    margin-right: 0; /* Remove extra space for mobile */
+    text-align: center;
+    margin-bottom: 20px; /* Space between logo and links */
+  }
+
+  .nav-center {
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-center a {
+    margin: 10px 0; /* Adjust vertical space for mobile */
+  }
+
+  .nav-right {
+    justify-content: center; /* Center Sign In/Sign Up */
+    margin-top: 20px; /* Space between Sign In/Sign Up links */
+  }
+
+  .nav-right a {
+    margin-left: 10px; /* Less space for Sign In/Sign Up on mobile */
+  }
 }
