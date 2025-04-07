@@ -10,14 +10,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 15px 50px; /* Increased padding for more space */
+  padding: 15px 30px; /* Added padding for better spacing */
 }
 
 .nav-left {
-  font-size: 28px; /* Increased font size for visibility */
+  font-size: 28px; /* Larger font size for the app name */
   font-weight: bold;
   color: #00ffff;
-  margin-right: 60px; /* More space between NoTify and the navigation links */
 }
 
 .nav-center {
@@ -27,13 +26,15 @@ nav {
 }
 
 .nav-center a {
-  margin: 0 30px; /* Increased space between navigation links */
+  margin: 0 25px; /* Gaps between navigation items */
   color: #fff;
   text-decoration: none;
+  font-size: 16px; /* Adjust font size for better readability */
 }
 
 .nav-center a:hover {
   color: #00ffff;
+  text-decoration: underline; /* Adding an underline on hover for effect */
 }
 
 .nav-right {
@@ -45,14 +46,16 @@ nav {
   margin-left: 30px; /* Space between Sign In and Sign Up */
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .nav-right a:hover {
   color: #00ffff;
+  text-decoration: underline;
 }
 
 .container {
-  max-width: 600px; /* Increased container size */
+  max-width: 600px; /* Wider container for better readability */
   margin: 40px auto;
   padding: 20px;
   background-color: #1c1c1c;
@@ -95,35 +98,31 @@ button {
   font-size: 14px;
 }
 
-/* Mobile Responsiveness: Adjust Navigation */
+/* Mobile Responsiveness: Keep Horizontal Navigation */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    padding: 20px 20px; /* Increase padding for mobile view */
+    flex-direction: row; /* Ensure horizontal layout */
+    padding: 15px 15px; /* Adjusted padding */
+    justify-content: space-between;
   }
 
   .nav-left {
-    margin-right: 0; /* Remove extra space for mobile */
-    text-align: center;
-    margin-bottom: 20px; /* Space between logo and links */
+    font-size: 26px; /* Adjusted size for mobile */
+    margin-right: 20px; /* Adjusted margin for better spacing */
   }
 
   .nav-center {
-    flex-direction: column; /* Stack links vertically */
     width: 100%;
-    align-items: center;
+    justify-content: center; /* Center the navigation links */
   }
 
   .nav-center a {
-    margin: 15px 0; /* Adjust vertical space for mobile */
+    margin: 0 20px; /* Adjust gaps for better mobile appearance */
+    font-size: 14px; /* Adjust font size for mobile */
   }
 
   .nav-right {
-    justify-content: center; /* Center Sign In/Sign Up */
-    margin-top: 20px; /* Space between Sign In/Sign Up links */
-  }
-
-  .nav-right a {
-    margin-left: 10px; /* Less space for Sign In/Sign Up on mobile */
+    justify-content: center; /* Center the Sign In/Sign Up links on mobile */
+    margin-left: 10px; /* Adjust spacing */
   }
 }
