@@ -1,3 +1,4 @@
+/* General styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -10,11 +11,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 15px 30px; /* Added padding for better spacing */
+  padding: 15px 30px; /* Added padding for spacing */
 }
 
 .nav-left {
-  font-size: 28px; /* Larger font size for the app name */
+  font-size: 28px;
   font-weight: bold;
   color: #00ffff;
 }
@@ -26,15 +27,15 @@ nav {
 }
 
 .nav-center a {
-  margin: 0 25px; /* Gaps between navigation items */
+  margin: 0 25px; /* Increased gap between navigation links */
   color: #fff;
   text-decoration: none;
-  font-size: 16px; /* Adjust font size for better readability */
+  font-size: 16px; /* Adjusted font size for clarity */
 }
 
 .nav-center a:hover {
   color: #00ffff;
-  text-decoration: underline; /* Adding an underline on hover for effect */
+  text-decoration: underline; /* Hover effect */
 }
 
 .nav-right {
@@ -54,8 +55,9 @@ nav {
   text-decoration: underline;
 }
 
+/* Container for login/signup */
 .container {
-  max-width: 600px; /* Wider container for better readability */
+  max-width: 600px;
   margin: 40px auto;
   padding: 20px;
   background-color: #1c1c1c;
@@ -91,38 +93,31 @@ button {
   font-weight: bold;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-/* Mobile Responsiveness: Keep Horizontal Navigation */
+/* Adjust for Mobile view */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* Ensure horizontal layout */
-    padding: 15px 15px; /* Adjusted padding */
+    flex-direction: row; /* Horizontal layout for mobile as well */
+    padding: 15px 15px;
     justify-content: space-between;
   }
 
   .nav-left {
-    font-size: 26px; /* Adjusted size for mobile */
-    margin-right: 20px; /* Adjusted margin for better spacing */
+    font-size: 26px;
+    margin-right: 20px;
   }
 
   .nav-center {
     width: 100%;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center; /* Centering the links */
   }
 
   .nav-center a {
-    margin: 0 20px; /* Adjust gaps for better mobile appearance */
-    font-size: 14px; /* Adjust font size for mobile */
+    margin: 0 20px; /* Adjust gap for mobile */
+    font-size: 14px;
   }
 
   .nav-right {
-    justify-content: center; /* Center the Sign In/Sign Up links on mobile */
-    margin-left: 10px; /* Adjust spacing */
+    justify-content: center; /* Center the Sign In/Sign Up links */
+    margin-left: 10px;
   }
 }
