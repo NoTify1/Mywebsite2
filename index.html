@@ -1,44 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoTify</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- Navigation bar -->
+<nav>
+  <div class="nav-left">NoTify</div>
+  <div class="nav-center">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contacts</a>
+    <a href="#">About Us</a>
+  </div>
+  <div class="nav-right">
+    <a href="javascript:void(0);" id="sign-in-btn">Sign In</a>
+    <a href="javascript:void(0);" id="sign-up-btn">Sign Up</a>
+  </div>
+</nav>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-left">
-      NoTify
-    </div>
-    <div class="nav-center">
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Contacts</a>
-      <a href="#">About Us</a>
-    </div>
-    <div class="nav-right">
-      <a href="#">Sign In</a>
-      <a href="#">Sign Up</a>
-    </div>
-  </nav>
-
-  <!-- Login / Signup Container -->
-  <div class="container">
-    <h2>Login</h2>
+<!-- Container for the forms -->
+<div class="container" id="form-container">
+  <!-- Sign In Form -->
+  <div id="sign-in-form">
+    <h2>Sign In</h2>
     <form action="#">
       <input type="text" placeholder="Username or Email" required>
       <input type="password" placeholder="Password" required>
       <div class="row">
         <label><input type="checkbox"> Remember Me</label>
-        <a href="#">Forgot Password?</a>
+        <a href="#" class="forgot-password">Forgot Password?</a>
       </div>
       <button type="submit">Login</button>
     </form>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Sign Up Form -->
+  <div id="sign-up-form" style="display: none;">
+    <h2>Sign Up</h2>
+    <form action="#">
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <div class="row">
+      <a href="javascript:void(0);" id="have-account">Already have an account? Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript to toggle between forms -->
+<script>
+  const signInBtn = document.getElementById("sign-in-btn");
+  const signUpBtn = document.getElementById("sign-up-btn");
+  const signInForm = document.getElementById("sign-in-form");
+  const signUpForm = document.getElementById("sign-up-form");
+  const haveAccountLink = document.getElementById("have-account");
+
+  // Show sign-up form and hide sign-in
+  signUpBtn.onclick = function() {
+    signInForm.style.display = "none";
+    signUpForm.style.display = "block";
+  };
+
+  // Show sign-in form and hide sign-up
+  signInBtn.onclick = function() {
+    signInForm.style.display = "block";
+    signUpForm.style.display = "none";
+  };
+
+  // Go back to sign-in form from sign-up
+  haveAccountLink.onclick = function() {
+    signInForm.style.display = "block";
+    signUpForm.style.display = "none";
+  };
+</script>
