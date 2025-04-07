@@ -93,13 +93,14 @@ button {
   font-weight: bold;
 }
 
+/* Forgot Password Link Color Change */
 .forgot-password {
-  color: #fff; /* Changed color to white */
+  color: white; /* Changed color to white */
   text-decoration: none;
 }
 
 .forgot-password:hover {
-  color: #00ffff;
+  color: #00ffff; /* Added hover effect to match the theme */
   text-decoration: underline;
 }
 
