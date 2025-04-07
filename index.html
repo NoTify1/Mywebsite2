@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoTify</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoTify | Sujal Giri</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">NoTify</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Contact</a>
-      <a href="#">About Us</a>
-    </div>
-    <div class="auth-links">
-      <a onclick="showLogin()">Sign In</a>
-      <a onclick="showSignup()">Sign Up</a>
-    </div>
-  </div>
 
-  <!-- Login Form -->
-  <div id="login-form" class="form-section">
-    <h2>Login</h2>
-    <p>Don't have an account? <a onclick="showSignup()">Sign up</a></p>
-    <input type="text" id="login-username" placeholder="Username or Email">
-    <input type="password" id="login-password" placeholder="Password">
-    <button onclick="loginUser()">Sign In</button>
-    <div class="form-footer">
-      <label><input type="checkbox"> Remember me</label>
-      <a href="#">Forgot password?</a>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">NoTify</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- Signup Form -->
-  <div id="signup-form" class="form-section" style="display:none;">
-    <h2>Register</h2>
-    <p>Have an account? <a onclick="showLogin()">Login</a></p>
-    <input type="text" placeholder="First Name">
-    <input type="text" placeholder="Last Name">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <button onclick="signupUser()">Register</button>
-    <div class="form-footer">
-      <label><input type="checkbox"> Remember me</label>
-      <a href="#">Terms & Conditions</a>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi, I'm Sujal Giri</h1>
+      <p>Creator of Subscription Expiry Notification App</p>
+      <a href="#contact" class="btn">Let's Connect</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Dashboard -->
-  <div id="dashboard" class="dashboard">
-    <h2>Welcome to NoTify Dashboard</h2>
-    <div class="card">
-      <h3>Netflix Subscription</h3>
-      <p>Expires on: 2025-04-30</p>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About NoTify</h2>
+      <p>NoTify is a subscription expiry notification app that helps users manage Netflix, Amazon Prime, and bank services with real-time alerts and a modern mobile experience. Never miss a renewal again!</p>
     </div>
-    <div class="card">
-      <h3>Amazon Prime</h3>
-      <p>Expires on: 2025-05-10</p>
-    </div>
-    <div class="card">
-      <h3>Bank Service</h3>
-      <p>Expires on: 2025-06-15</p>
-    </div>
-  </div>
+  </section>
 
-  <script src="scripts.js"></script>
+  <!-- Features Section -->
+  <section id="features" class="section dark-bg">
+    <div class="container">
+      <h2>What I Offer</h2>
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-bell"></i>
+          <h3>Smart Notifications</h3>
+          <p>Get alerts before any subscription expires.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Friendly</h3>
+          <p>Sleek and modern UI for smooth usage.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>Cloud Synced</h3>
+          <p>Your reminders are safely backed up and synced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61563769991865" target="_blank">Click Here</a></p>
+      <p>Email: <a href="mailto:sujalgiri574@gmail.com">sujalgiri574@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sujal Giri | Made with passion for NoTify</p>
+  </footer>
+
 </body>
 </html>
