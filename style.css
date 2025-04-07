@@ -1,61 +1,86 @@
-/* General styles */
-body {
+/* Base styles */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
   background-color: #111;
   color: #fff;
 }
 
+/* Navigation Bar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  padding: 15px 30px; /* Added padding for spacing */
+  background-color: #000;
+  padding: 15px 30px;
 }
 
-.nav-left {
+.logo {
   font-size: 28px;
   font-weight: bold;
   color: #00ffff;
 }
 
-.nav-center {
+.nav-links {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-.nav-center a {
-  margin: 0 25px; /* Increased gap between navigation links */
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px; /* Adjusted font size for clarity */
-}
-
-.nav-center a:hover {
-  color: #00ffff;
-  text-decoration: underline; /* Hover effect */
-}
-
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-right a {
-  margin-left: 30px; /* Space between Sign In and Sign Up */
+.nav-links a {
+  margin: 0 20px;
   color: #fff;
   text-decoration: none;
   font-size: 16px;
 }
 
+.nav-links a:hover,
 .nav-right a:hover {
   color: #00ffff;
   text-decoration: underline;
 }
 
-/* Container for login/signup */
+.nav-right a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hero section */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Login/Signup Container */
 .container {
   max-width: 600px;
   margin: 40px auto;
@@ -93,42 +118,42 @@ button {
   font-weight: bold;
 }
 
-/* Forgot password text color */
+/* Extra styles */
 .forgot-password {
-  color: white; /* Change color to white */
-  margin-top: 10px; /* Add space between forgot password and remember me */
+  color: white;
+  margin-top: 10px;
 }
 
-/* Space between Remember Me and Forgot Password */
-.remember-me {
-  margin-bottom: 15px; /* Adds space below Remember Me */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Adjust for Mobile view */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  background-color: #000;
+  margin-top: 60px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: row; /* Horizontal layout for mobile as well */
-    padding: 15px 15px;
-    justify-content: space-between;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .nav-left {
-    font-size: 26px;
-    margin-right: 20px;
-  }
-
-  .nav-center {
-    width: 100%;
-    justify-content: center; /* Centering the links */
-  }
-
-  .nav-center a {
-    margin: 0 20px; /* Adjust gap for mobile */
+  .nav-links a,
+  .nav-right a {
     font-size: 14px;
+    margin: 10px;
   }
 
-  .nav-right {
-    justify-content: center; /* Center the Sign In/Sign Up links */
-    margin-left: 10px;
+  .logo {
+    font-size: 24px;
   }
 }
