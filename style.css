@@ -11,7 +11,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding: 15px 30px; /* Adjusted padding */
+  padding: 15px 30px; /* Added padding for spacing */
 }
 
 .nav-left {
@@ -27,15 +27,15 @@ nav {
 }
 
 .nav-center a {
-  margin: 0 25px; /* Adjusted gap */
+  margin: 0 25px; /* Increased gap between navigation links */
   color: #fff;
   text-decoration: none;
-  font-size: 16px; 
+  font-size: 16px; /* Adjusted font size for clarity */
 }
 
 .nav-center a:hover {
   color: #00ffff;
-  text-decoration: underline;
+  text-decoration: underline; /* Hover effect */
 }
 
 .nav-right {
@@ -57,16 +57,16 @@ nav {
 
 /* Container for login/signup */
 .container {
-  max-width: 800px; /* Increased size for more space */
+  max-width: 600px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 20px;
   background-color: #1c1c1c;
   border-radius: 10px;
 }
 
 .container h2 {
   text-align: center;
-  margin-bottom: 30px; /* Increased space for better readability */
+  margin-bottom: 20px;
   color: #00ffff;
 }
 
@@ -93,28 +93,10 @@ button {
   font-weight: bold;
 }
 
-/* Forgot Password Link Color Change */
-.forgot-password {
-  color: white; /* Changed color to white */
-  text-decoration: none;
-}
-
-.forgot-password:hover {
-  color: #00ffff; /* Added hover effect to match the theme */
-  text-decoration: underline;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
 /* Adjust for Mobile view */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* Horizontal layout for mobile */
+    flex-direction: row; /* Horizontal layout for mobile as well */
     padding: 15px 15px;
     justify-content: space-between;
   }
@@ -126,7 +108,7 @@ button {
 
   .nav-center {
     width: 100%;
-    justify-content: center; /* Center the links */
+    justify-content: center; /* Centering the links */
   }
 
   .nav-center a {
@@ -135,14 +117,7 @@ button {
   }
 
   .nav-right {
-    justify-content: center; /* Center Sign In/Sign Up links */
+    justify-content: center; /* Center the Sign In/Sign Up links */
     margin-left: 10px;
-  }
-
-  /* Adjust Login container for mobile */
-  .container {
-    max-width: 90%; /* Make container responsive */
-    margin: 20px auto;
-    padding: 20px;
   }
 }
