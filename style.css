@@ -1,150 +1,131 @@
-/* General styles */
+/* Global styles */
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #111;
-  color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111111; /* Dark background for a Gen-Z aesthetic */
+    color: white;
 }
 
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  padding: 15px 20px;
+a {
+    color: #63B3ED; /* Tailwind default blue for links */
+    text-decoration: none;
 }
 
-nav .logo {
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
+a:hover {
+    text-decoration: underline;
 }
 
-nav .nav-links a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav .nav-links a:hover {
-  color: #00ffff; /* Hover color */
-  text-decoration: underline;
-}
-
-/* Container for login/signup */
-.container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #1c1c1c;
-  border-radius: 10px;
-}
-
-.container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00ffff; /* Header color */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 15px 0;
-  background-color: #333;
-  border: none;
-  color: white;
-  border-radius: 5px;
-}
-
+/* Button styling */
 button {
-  width: 100%;
-  padding: 15px;
-  background-color: #00ffff; /* Button color */
-  color: #111;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #00b3b3; /* Slightly darker hover effect */
+    background-color: #4C51BF; /* Hover effect for buttons */
 }
 
-/* Forgot password text color */
-.forgot-password {
-  color: white;
-  margin-top: 10px;
+/* Landing Page Hero Section */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
 }
 
-.forgot-password:hover {
-  color: #00ffff;
-  text-decoration: underline;
+section .bg-black {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
 }
 
-/* Space between Remember Me and Forgot Password */
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.row label {
-  color: white;
+p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #666;
-  background-color: #000;
+a {
+    background-color: #5A67D8; /* Indigo button color */
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-/* Adjust for Mobile view */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    padding: 15px 15px;
-    justify-content: space-between;
-  }
+a:hover {
+    background-color: #434190; /* Slightly darker on hover */
+}
 
-  .nav-left {
-    font-size: 26px;
-    margin-right: 20px;
-  }
+/* Forms (Sign-In and Sign-Up) */
+section form {
+    background-color: #2D3748; /* Dark background for forms */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
-  .nav-center {
+input, select {
     width: 100%;
-    justify-content: center;
-  }
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #E2E8F0;
+    color: #1A202C;
+    font-size: 1rem;
+    border: none;
+}
 
-  .nav-center a {
-    margin: 0 20px;
-    font-size: 14px;
-  }
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid #63B3ED; /* Blue border on focus */
+}
 
-  .nav-right {
-    justify-content: center;
-    margin-left: 10px;
-  }
-
-  .container {
+button {
+    background-color: #4C51BF;
+    width: 100%;
     padding: 15px;
-  }
+    font-size: 1rem;
+    margin-top: 20px;
+}
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    padding: 12px;
-  }
+button:disabled {
+    background-color: #CBD5E0; /* Disabled button */
+    cursor: not-allowed;
+}
 
-  button {
+/* Notification Settings Page */
+section .mb-4 {
+    margin-bottom: 20px;
+}
+
+select, input[type="date"] {
+    width: 100%;
     padding: 12px;
-  }
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: #E2E8F0;
+}
+
+button[type="submit"] {
+    background-color: #38B2AC;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #319795; /* Darker shade on hover */
 }
