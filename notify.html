@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Notifications - NoTify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Notification Settings -->
+    <section class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-md my-16">
+        <h2 class="text-3xl text-center mb-6">Set Your Notifications</h2>
+        <form id="notification-form" onsubmit="return handleNotification()">
+            <div class="mb-4">
+                <label for="service" class="block text-white">Choose a Service</label>
+                <select id="service" name="service" class="w-full p-3 mt-2 rounded-md text-black">
+                    <option value="netflix">Netflix</option>
+                    <option value="amazon-prime">Amazon Prime</option>
+                    <option value="bank">Bank Subscription</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="expiry-date" class="block text-white">Expiry Date</label>
+                <input type="date" id="expiry-date" name="expiry-date" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg mt-4">Set Notification</button>
+        </form>
+    </section>
+
+    <script>
+        function handleNotification() {
+            const service = document.getElementById("service").value;
+            const expiryDate = document.getElementById("expiry-date").value;
+
+            if (!expiryDate) {
+                alert("Please select an expiry date.");
+                return false;
+            }
+
+            // Here, you can handle the data (e.g., save it to a database or send an email notification)
+            alert(`Notification set for ${service} on ${expiryDate}`);
+            return false; // Prevent form submission for now
+        }
+    </script>
+
+</body>
+</html>
