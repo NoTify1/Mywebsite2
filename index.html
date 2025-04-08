@@ -1,75 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoTify - Subscription Expiry Notifications</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
-</head>
-<body class="bg-black text-white smooth-scroll">
-    <header class="flex justify-between p-4">
-        <div class="text-xl font-bold">NoTify</div>
-        <nav>
-            <a href="#signup" class="px-4 py-2">Get Started</a>
-        </nav>
-    </header>
+<!-- Firebase Script -->
+<script type="module">
+  // Import Firebase from CDN
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-    <section class="text-center py-24 fade-in">
-        <h1 class="text-5xl font-bold mb-4">Never miss a subscription expiry again</h1>
-        <p class="text-xl mb-8">Stay informed with timely expiry notifications for your Netflix, Amazon Prime, and Bank subscriptions.</p>
-        <a href="sign-up.html" class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Get Started</a>
-    </section>
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyB-BKp6RXc93xPSQh9bO4MbGAuJTjA3EuM",
+    authDomain: "notify-21996.firebaseapp.com",
+    projectId: "notify-21996",
+    storageBucket: "notify-21996.firebasestorage.app",
+    messagingSenderId: "502972762939",
+    appId: "1:502972762939:web:748f6604b3d6c4b543c51e",
+    measurementId: "G-S475SM2XQW"
+  };
 
-    <footer class="text-center py-4 mt-10 bg-gray-800">
-        <p>&copy; 2025 NoTify. All rights reserved. Created By: Sujal Giri.</p>
-    </footer>
-
-    <!-- Firebase Script Starts -->
-    <script type="module">
-      // Import Firebase from CDN
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
-      // Your Firebase config (removed API key for security)
-      const firebaseConfig = {
-        authDomain: "notify-21996.firebaseapp.com",
-        projectId: "notify-21996",
-        storageBucket: "notify-21996.firebasestorage.app",
-        messagingSenderId: "502972762939",
-        appId: "1:502972762939:web:92fb82497093406643c51e"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
-
-      // Example function to save user subscription
-      async function saveSubscription() {
-        await addDoc(collection(db, "subscriptions"), {
-          userId: "user123",
-          service: "Netflix",
-          expiry: "2025-06-01"
-        });
-        alert("Data saved to Firebase!");
-      }
-
-      // Call the function (will run when page loads)
-      saveSubscription();
-    </script>
-    <!-- Firebase Script Ends -->
-
-</body>
-</html>
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+</script>
