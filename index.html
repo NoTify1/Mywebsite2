@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoTify - Subscription Expiry Alerts</title>
+    <title>NoTify - Subscription Expiry Notifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-black text-white smooth-scroll">
+    <header class="flex justify-between p-4">
+        <div class="text-xl font-bold">NoTify</div>
+        <nav>
+            <a href="#signup" class="px-4 py-2">Get Started</a>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="flex items-center justify-center min-h-screen bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1200x800');">
-        <div class="text-center bg-black bg-opacity-50 p-8">
-            <h1 class="text-5xl font-semibold mb-4">Never Miss Your Subscription Expiry Dates</h1>
-            <p class="text-lg mb-8">Get notified about your Netflix, Amazon Prime, and bank subscriptions!</p>
-            <a href="signup.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg" onclick="startSignup()">Get Started</a>
-        </div>
+    <section class="text-center py-24 fade-in">
+        <h1 class="text-5xl font-bold mb-4">Never miss a subscription expiry again</h1>
+        <p class="text-xl mb-8">Stay informed with timely expiry notifications for your Netflix, Amazon Prime, and Bank subscriptions.</p>
+        <a href="sign-up.html" class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Get Started</a>
     </section>
 
-    <script>
-        function startSignup() {
-            // You can add any action here, such as logging user behavior or analytics
-            console.log("Get Started button clicked!");
-        }
-    </script>
-
+    <footer class="text-center py-4 mt-10 bg-gray-800">
+        <p>&copy; 2025 NoTify. All rights reserved.</p>
+    </footer>
 </body>
 </html>
