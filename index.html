@@ -4,98 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NoTify - Subscription Tracker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #111;
-      color: #fff;
-    }
-
-    nav {
-      background-color: #000;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .logo {
-      font-size: 24px;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    nav .nav-links a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background-color: #1a1a1a;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #aaa;
-      margin-bottom: 30px;
-    }
-
-    .hero button {
-      padding: 12px 30px;
-      background-color: #00ffff; /* Updated color to match login button */
-      color: #111;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-      background-color: #000;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans">
 
-  <nav>
-    <div class="logo">NoTify</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Contact</a>
-      <a href="#">About Us</a>
-      <a href="login.html">Sign In / Sign Up</a>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+    <div class="text-2xl font-bold text-cyan-400">NoTify</div>
+    <div class="space-x-6">
+      <a href="#" class="hover:text-cyan-400">Home</a>
+      <a href="#" class="hover:text-cyan-400">Features</a>
+      <a href="#" class="hover:text-cyan-400">Contact</a>
+      <a href="#" class="hover:text-cyan-400">About Us</a>
+      <a href="login.html" class="hover:text-cyan-400">Sign In / Sign Up</a>
     </div>
   </nav>
 
-  <section class="hero">
-    <h1>Never Miss a Subscription</h1>
-    <p>Track Netflix, Amazon Prime, and Bank expiries – all in one place.</p>
-    <a href="login.html"><button>Get Started – It's Free</button></a>
+  <!-- Hero Section -->
+  <section class="text-center py-24 bg-gray-800">
+    <h1 class="text-4xl font-bold mb-4">Never Miss a Subscription</h1>
+    <p class="text-lg text-gray-400 mb-6">Track Netflix, Amazon Prime, and Bank expiries – all in one place.</p>
+    <a href="login.html" class="px-6 py-3 bg-red-600 hover:bg-red-700 rounded text-white font-semibold">Get Started – It's Free</a>
   </section>
 
-  <footer>
-    &copy; 2025 NoTify. Built in Nepal by <strong>Sujal Giri</strong> with hustle.
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-black text-gray-500">
+    © 2025 NoTify. Built in Nepal by <span class="text-white font-semibold">Sujal Giri</span> with hustle.
   </footer>
 
 </body>
