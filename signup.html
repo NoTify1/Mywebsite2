@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - NoTify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Sign-Up Form -->
+    <section class="max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-md my-16">
+        <h2 class="text-3xl text-center mb-6">Sign Up</h2>
+        <form id="signup-form" onsubmit="return validateSignUpForm()">
+            <div class="mb-4">
+                <label for="email" class="block text-white">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-white">Password</label>
+                <input type="password" id="password" name="password" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="confirm-password" class="block text-white">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg mt-4">Sign Up</button>
+        </form>
+        <div class="mt-4 text-center">
+            <p>Already have an account? <a href="signin.html" class="text-indigo-400">Sign in here</a></p>
+        </div>
+    </section>
+
+    <script>
+        function validateSignUpForm() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+
+</body>
+</html>
