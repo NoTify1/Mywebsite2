@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NoTify - Subscription Tracker</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoTify - Subscription Expiry Notifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-black text-white font-poppins">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-6 bg-gray-900">
+        <div class="text-lg font-bold">NoTify</div>
+        <div class="space-x-4">
+            <a href="#home" class="hover:text-gray-400">Home</a>
+            <a href="#features" class="hover:text-gray-400">Features</a>
+            <a href="#contact" class="hover:text-gray-400">Contact</a>
+            <a href="#signin" class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Sign In</a>
+        </div>
+    </nav>
 
-  <!-- Navigation Bar -->
-  <nav class="flex justify-between items-center p-6 bg-black">
-    <div class="text-2xl font-semibold text-blue-400">NoTify</div>
-    <div class="space-x-6">
-      <a href="#" class="hover:text-blue-400">Home</a>
-      <a href="#" class="hover:text-blue-400">Features</a>
-      <a href="#" class="hover:text-blue-400">Contact</a>
-      <a href="#" class="hover:text-blue-400">About Us</a>
-      <a href="login.html" class="hover:text-blue-400">Sign In / Sign Up</a>
-    </div>
-  </nav>
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col items-center justify-center min-h-screen bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1200x800');">
+        <div class="text-center text-white p-8 bg-black bg-opacity-50">
+            <h1 class="text-5xl font-semibold mb-4">Never Miss An Expiry Date</h1>
+            <p class="text-lg mb-8">Get notified about your Netflix, Amazon Prime, and bank subscription expiry dates!</p>
+            <a href="#signup" class="bg-indigo-600 text-white px-6 py-3 rounded-lg">Get Started</a>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20">
-    <h1 class="text-4xl font-semibold mb-4">Never Miss a Subscription</h1>
-    <p class="text-lg text-gray-400 mb-8">Track Netflix, Amazon Prime, and Bank expiries – all in one place.</p>
-    <a href="login.html">
-      <button class="bg-red-600 text-white px-8 py-3 rounded-md text-lg">Get Started – It's Free</button>
-    </a>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-8 bg-gray-800 text-center">
+        <h2 class="text-4xl text-white font-semibold mb-6">Our Features</h2>
+        <div class="flex justify-center gap-8">
+            <div class="w-64 bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-xl text-indigo-500">Email Notifications</h3>
+                <p class="mt-4 text-white">Receive notifications via email when your subscriptions are about to expire.</p>
+            </div>
+            <div class="w-64 bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-xl text-indigo-500">SMS Notifications</h3>
+                <p class="mt-4 text-white">Get reminders via SMS for your subscription expiry dates.</p>
+            </div>
+            <div class="w-64 bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-xl text-indigo-500">Dashboard</h3>
+                <p class="mt-4 text-white">A modern, easy-to-use dashboard to track all your subscriptions.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-4 bg-black">
-    <p>&copy; 2025 NoTify. Built in Nepal by <strong>Sujal Giri</strong> with hustle.</p>
-  </footer>
+    <!-- Sign In Section -->
+    <section id="signin" class="py-16 px-8 bg-gray-900">
+        <h2 class="text-3xl text-center text-white mb-6">Sign In</h2>
+        <form action="/login" method="POST" class="max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="email" class="block text-white">Email Address</label>
+                <input type="email" id="email" name="email" required class="w-full p-3 mt-2 rounded-md text-black">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-white">Password</label>
+                <input type="password" id="password" name="password" required class="w-full p-3 mt-2 rounded-md text-black">
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg mt-4">Sign In</button>
+        </form>
+    </section>
 
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p>&copy; 2025 NoTify. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
