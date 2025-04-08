@@ -34,7 +34,43 @@
     </section>
 
     <footer class="text-center py-4 mt-10 bg-gray-800">
-        <p>&copy; 2025 NoTify. All rights reserved.Created By: Sujal Giri.</p>
+        <p>&copy; 2025 NoTify. All rights reserved. Created By: Sujal Giri.</p>
     </footer>
+
+    <!-- Firebase Script Starts -->
+    <script type="module">
+      // Import Firebase from CDN
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+      // Your Firebase config
+      const firebaseConfig = {
+        apiKey: "AIzaSyB-BKp6RXc93xPSQh9bO4MbGAuJTjA3EuM",
+        authDomain: "notify-21996.firebaseapp.com",
+        projectId: "notify-21996",
+        storageBucket: "notify-21996.firebasestorage.app",
+        messagingSenderId: "502972762939",
+        appId: "1:502972762939:web:92fb82497093406643c51e"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Example function to save user subscription
+      async function saveSubscription() {
+        await addDoc(collection(db, "subscriptions"), {
+          userId: "user123",
+          service: "Netflix",
+          expiry: "2025-06-01"
+        });
+        alert("Data saved to Firebase!");
+      }
+
+      // Call the function (will run when page loads)
+      saveSubscription();
+    </script>
+    <!-- Firebase Script Ends -->
+
 </body>
 </html>
