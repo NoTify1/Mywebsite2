@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - NoTify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Sign-In Form -->
+    <section class="max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-md my-16">
+        <h2 class="text-3xl text-center mb-6">Sign In</h2>
+        <form id="signin-form" onsubmit="return validateSignInForm()">
+            <div class="mb-4">
+                <label for="email" class="block text-white">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-white">Password</label>
+                <input type="password" id="password" name="password" class="w-full p-3 mt-2 rounded-md text-black" required>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg mt-4">Sign In</button>
+        </form>
+        <div class="mt-4 text-center">
+            <p>Don't have an account? <a href="signup.html" class="text-indigo-400">Sign up here</a></p>
+        </div>
+    </section>
+
+    <script>
+        function validateSignInForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+                alert("Please fill in both fields.");
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+
+</body>
+</html>
