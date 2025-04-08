@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoTify - Subscription Expiry Notifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white smooth-scroll">
+    <header class="flex justify-between p-4">
+        <div class="text-xl font-bold">NoTify</div>
+        <nav>
+            <a href="#signup" class="px-4 py-2">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="text-center py-24 fade-in">
+        <h1 class="text-5xl font-bold mb-4">Never miss a subscription expiry again</h1>
+        <p class="text-xl mb-8">Stay informed with timely expiry notifications for your Netflix, Amazon Prime, and Bank subscriptions.</p>
+        <a href="sign-up.html" class="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Get Started</a>
+    </section>
+
+    <footer class="text-center py-4 mt-10 bg-gray-800">
+        <p>&copy; 2025 NoTify. All rights reserved.Created By: Sujal Giri.</p>
+    </footer>
+</body>
+</html>
