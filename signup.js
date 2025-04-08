@@ -6,7 +6,6 @@ document.getElementById('signup-form').addEventListener('submit', function (e) {
     let password = document.getElementById('password').value;
     let confirmPassword = document.getElementById('confirm-password').value;
 
-    // Simple email validation regex
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
