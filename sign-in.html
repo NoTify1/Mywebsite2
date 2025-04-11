@@ -30,5 +30,24 @@
       <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Sign In</button>
     </form>
   </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <!-- Your Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBwpFgZgC7RTWUNTsQWC-jpExLDSqT0Zrc",
+      authDomain: "notifyauth-9e80d.firebaseapp.com",
+      projectId: "notifyauth-9e80d",
+      storageBucket: "notifyauth-9e80d.firebasestorage.app",
+      messagingSenderId: "827329322112",
+      appId: "1:827329322112:web:94598b795f2ceb25545a65"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </body>
 </html>
