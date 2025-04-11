@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign In - NoTify</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <script defer src="signin.js"></script>
 </head>
 <body class="bg-black text-white">
@@ -21,11 +21,11 @@
     <form id="signin-form" class="space-y-4">
       <div>
         <label for="email" class="block text-lg">Email</label>
-        <input type="email" id="email" class="w-full p-3 bg-gray-700 text-white rounded-lg" required>
+        <input type="email" id="email" class="w-full p-3 bg-gray-700 text-white rounded-lg" required />
       </div>
       <div>
         <label for="password" class="block text-lg">Password</label>
-        <input type="password" id="password" class="w-full p-3 bg-gray-700 text-white rounded-lg" required>
+        <input type="password" id="password" class="w-full p-3 bg-gray-700 text-white rounded-lg" required />
       </div>
       <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Sign In</button>
     </form>
@@ -35,18 +35,16 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 
-  <!-- Updated Firebase Config -->
   <script>
     const firebaseConfig = {
-      apiKey: "YOUR_NEW_API_KEY",  <!-- Replace with your new API key -->
+      apiKey: "AIzaSyAV0_BwGQaKcSGPCHwbVXENRUstjWqKGrA",
       authDomain: "notifyauth-9e80d.firebaseapp.com",
       projectId: "notifyauth-9e80d",
-      storageBucket: "notifyauth-9e80d.firebasestorage.app",
+      storageBucket: "notifyauth-9e80d.appspot.com",
       messagingSenderId: "827329322112",
       appId: "1:827329322112:web:94598b795f2ceb25545a65"
     };
 
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
 </body>
