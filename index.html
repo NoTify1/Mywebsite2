@@ -24,7 +24,7 @@
     <div class="text-xl font-bold">NoTify</div>
     <nav>
       <a href="#signup" class="px-4 py-2">Get Started</a>
-      <a href="pricing.html" class="px-4 py-2">Upgrade</a> <!-- Changed "Pricing" to "Upgrade" -->
+      <a href="pricing.html" class="px-4 py-2">Upgrade</a>
     </nav>
   </header>
 
@@ -40,30 +40,21 @@
 
   <!-- Firebase Script Starts -->
   <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    
+    // Your web app's Firebase configuration
     const firebaseConfig = {
-      authDomain: "notify-21996.firebaseapp.com",
-      projectId: "notify-21996",
-      storageBucket: "notify-21996.firebasestorage.app",
-      messagingSenderId: "502972762939",
-      appId: "1:502972762939:web:92fb82497093406643c51e"
+      apiKey: "AIzaSyCMPqyAPQZr-FQJDj9Vo9S4N3-X2bwFltw",
+      authDomain: "notify-backend-a59ce.firebaseapp.com",
+      projectId: "notify-backend-a59ce",
+      storageBucket: "notify-backend-a59ce.firebasestorage.app",
+      messagingSenderId: "840399313242",
+      appId: "1:840399313242:web:425d2e6fc4bc19f63cfb63"
     };
 
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    async function saveSubscription() {
-      await addDoc(collection(db, "subscriptions"), {
-        userId: "user123",
-        service: "Netflix",
-        expiry: "2025-06-01"
-      });
-      alert("Data saved to Firebase!");
-    }
-
-    saveSubscription();
   </script>
   <!-- Firebase Script Ends -->
 </body>
