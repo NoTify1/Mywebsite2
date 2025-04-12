@@ -1,10 +1,8 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+  import{getAuth, createUserWithEmailandpassword, signInWithEmailAndPassword} from"https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
+import{getFirestore, setDoc, doc} from"https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
+const firebaseConfig = {
     apiKey: "AIzaSyCMPqyAPQZr-FQJDj9Vo9S4N3-X2bwFltw",
     authDomain: "notify-backend-a59ce.firebaseapp.com",
     projectId: "notify-backend-a59ce",
@@ -15,3 +13,9 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+
+const signUp-document.getElementById('submitSignup');
+signup.addEventListener("click", (event)->{
+event.preventDefault();
+
+})
