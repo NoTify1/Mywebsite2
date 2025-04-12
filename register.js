@@ -9,7 +9,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
     projectId: "notify-backend-97e2a",
     storageBucket: "notify-backend-97e2a.firebasestorage.app",
     messagingSenderId: "125388997985",
-    appId: "1:125388997985:web:a33850f2e885511ef4f120"
+    appId: "1:125388997985:web:759265deda606840f4f120"
   };
 
   // Initialize Firebase
